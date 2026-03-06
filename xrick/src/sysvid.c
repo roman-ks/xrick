@@ -323,7 +323,7 @@ sysvid_update(rect_t *rects)
 	int pitch;
 	U32* pixelx;
 
-	SDL_LockTexture(texture, NULL, &pixelx, &pitch);
+	SDL_LockTexture(texture, NULL, (void**)&pixelx, &pitch);
 
 	n = 0;
 	rect = rects;
@@ -331,7 +331,7 @@ sysvid_update(rect_t *rects)
 	{
 		U16 o = rect->x + rect->y * fb_width;
 		U8* src0 = ((U8*)& fb) + o;
-		U8* dst0 = pixelx + o;
+		U8* dst0 = ((U8*) pixelx) + o;
 		for (int y = rect->y; y < rect->y + rect->height; y++)
 		{
 			U8* srcx = src0;

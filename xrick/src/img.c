@@ -16,7 +16,7 @@
 
 
 
-img_t *IMG_SPLASH;
+// img_t *IMG_SPLASH;
 
 
 

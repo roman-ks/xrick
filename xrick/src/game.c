@@ -191,8 +191,8 @@ game_run(char *path)
 	// callback, fps, simulate_infinite_loop
 	//
 	// "If called on the main browser thread, setting 0 or a negative value as the fps will
-	// use the browser’s requestAnimationFrame mechanism to call the main loop function."
-	// "This is HIGHLY recommended if you are doing rendering, as the browser’s
+	// use the browserï¿½s requestAnimationFrame mechanism to call the main loop function."
+	// "This is HIGHLY recommended if you are doing rendering, as the browserï¿½s
 	// requestAnimationFrame will make sure you render at a proper smooth rate that lines
 	// up properly with the browser and monitor."
 	//
