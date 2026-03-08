@@ -124,7 +124,7 @@ void sprites_paint2(U8 spriteNumber, U16 x, U16 y, U8 front)
 
 	/* convert to fb/px */
 	x_fb = x_map - MAPS_FB_X;
-	x_fb = y_map - MAPS_FB_Y;
+	y_fb = y_map - MAPS_FB_Y;
 
 	/* get buffer */
 	fb = fb_at(x_fb, y_fb);

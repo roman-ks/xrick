@@ -330,8 +330,8 @@ sysvid_update(rect_t *rects)
 	while (rect)
 	{
 		U16 o = rect->x + rect->y * fb_width;
-		U8* src0 = ((U8*)& fb) + o;
-		U8* dst0 = ((U8*) pixelx) + o;
+		U8* src0 = ((U8*)&fb) + o;
+		U8* dst0 = ((U8*)pixelx) + rect->y * pitch + rect->x * 4;
 		for (int y = rect->y; y < rect->y + rect->height; y++)
 		{
 			U8* srcx = src0;
@@ -351,7 +351,7 @@ sysvid_update(rect_t *rects)
 			}
 
 			src0 += fb_width;
-			dst0 += fb_width * 4;
+			dst0 += pitch;
 		}
 		rect = rect->next;
 		n++;
@@ -447,6 +447,5 @@ void sysvid_setGamma(U8 g)
 
 
 /* eof */
-
 
 
